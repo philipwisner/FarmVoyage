@@ -6,13 +6,17 @@
   </div>
   <div class="row profile-headers">
     <div class="col-xs-4">
-      <a href="/profile/route"><h2>Routes</h2></a>
+      <a href="/profile/route">
+        <h2>Routes</h2>
+      </a>
     </div>
     <div class="col-xs-4">
       <h2 class="active">Farms</h2>
     </div>
     <div class="col-xs-4">
-      <a href="/profile/account"><h2>Account</h2></a>
+      <a href="/profile/account">
+        <h2>Account</h2>
+      </a>
     </div>
   </div>
   <div class="row profile-content">
@@ -21,19 +25,39 @@
       <% if (places.length > 0) { %>
         <% places.forEach(function(place, i) { %>
           <div class="farm-card">
-            <h3><%= place.namePlace %></h3>
-            <p class="created hidden">Created: <%= place.timestamps%> </p>
-            <p><span>Address: </span><%= place.location.coordinates %></p>
-            <p class="website"><span>Website: </span><a href="<%= place.websitePlace %>"><%= place.websitePlace %></a></p>
-            <p class="phone"><span>Phone: </span><%= place.phonePlace %></p>
+            <h3>
+              <%= place.namePlace %>
+            </h3>
+            <p class="created hidden">Created:
+              <%= place.timestamps%>
+            </p>
+            <p>
+              <span>Address: </span>
+              <%= place.location.coordinates %>
+            </p>
+            <% if (place.websitePlace !== "undefined") {%>
+            <p class="website">
+              <span>Website: </span>
+              <a href="<%= place.websitePlace %>">
+                <%= place.websitePlace %>
+              </a>
+            </p>
+            <% } %>
+            <% if (place.phonePlace !== "undefined") { %>
+            <p class="phone">
+              <span>Phone: </span>
+              <%= place.phonePlace %>
+            </p>
+            <% } %>
             <button>See on Map</button>
           </div>
-        <% }) %>
-        <% } else { %>
-        <div class="">
-          <p><%= user.username %> doesn't have any farms yet.</p>
-        </div>
-      <% } %>
+          <% }) %>
+            <% } else { %>
+              <div class="">
+                <p>
+                  <%= user.username %> doesn't have any farms yet.</p>
+              </div>
+              <% } %>
     </div>
   </div>
 </div>

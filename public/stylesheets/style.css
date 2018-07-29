@@ -1,3 +1,21 @@
+@media screen and (min-width: 0px) and (max-width: 766px) {
+  #search-collapse {
+    display: block;
+  }
+  .home button {
+    padding: 8px 40px 5px 40px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 5000px) {
+  #search-collapse {
+    display: none;
+  }
+  .home button {
+    padding: 12px 40px 5px 40px;
+  }
+}
+
 .logo-small {
   max-height: 4vh;
   position: absolute;
@@ -467,18 +485,6 @@ p.phone {
   margin-bottom: 3vh;
 }
 
-@media screen and (min-width: 0px) and (max-width: 800px) {
-  .home button {
-    padding: 8px 40px 5px 40px;
-  }
-}
-
-@media screen and (min-width: 801px) and (max-width: 5000px) {
-  .home button {
-    padding: 12px 40px 5px 40px;
-  }
-}
-
 .signup {
   text-align: center;
   margin: 0 auto;
@@ -925,9 +931,9 @@ p.phone {
   background-color: #d99728;
   font-size: 1.4em;
   color: white;
+  padding: 10px 25px 5px 25px;
   border: none;
   border-radius: none;
-  padding: 5px 20px 5px 20px;
   text-transform: uppercase;
   font-weight: 600;
   border-radius: 100px;
@@ -966,18 +972,6 @@ p.phone {
 
 .main .main-content span {
   margin-left: 5%;
-}
-
-@media screen and (min-width: 0px) and (max-width: 766px) {
-  #search-collapse {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 767px) and (max-width: 5000px) {
-  #search-collapse {
-    display: none;
-  }
 }
 
 .profile-content-form input {
