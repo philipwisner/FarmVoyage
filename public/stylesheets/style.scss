@@ -1,5 +1,4 @@
 @import 'responsive-font-size';
-
 $primary-color: #d99728;
 $accent-color: #9CC871;
 $main-text-color: #6c6c6c;
@@ -8,15 +7,10 @@ $heading-font: Arial;
 $body-font: Arial;
 $bold-font: 600;
 
-
-// @media screen and (min-width: 0px) and (max-width: 800px) {
-
-// }
-
-// @media screen and (min-width: 801px) and (max-width: 5000px) {
-
-// }
-
+* {
+	box-sizing: border-box;
+	font-family: 'Josefin Sans', sans-serif;
+}
 
 @media screen and (min-width: 0px) and (max-width: 766px) {
 	#search-collapse {
@@ -32,6 +26,9 @@ $bold-font: 600;
 			position: relative;
 			top: -150px;
 			min-width: 150px;
+		}
+		.search-filters {
+			margin-top: 6vh;
 		}
 	}
 }
@@ -51,9 +48,11 @@ $bold-font: 600;
 			top: -200px;
 			min-width: 150px;
 		}
+		.search-filters {
+			margin-top: 3vh;
+		}
 	}
 }
-
 
 .logo-small {
 	max-height: 4vh;
@@ -80,7 +79,7 @@ p.phone {
 	color: #414141;
 	max-width: 500px;
 	margin: 0 auto;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	padding: 5px 20px 15px 20px;
 	position: relative;
 	img {
@@ -98,7 +97,6 @@ p.phone {
 	}
 }
 
-
 .farm-card {
 	background-color: #f2f2f2;
 	border: 1px solid #ededed;
@@ -106,7 +104,7 @@ p.phone {
 	color: #414141;
 	max-width: 500px;
 	margin: 0 auto;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	padding: 5px 0 15px 20px;
 	position: relative;
 	div {
@@ -124,12 +122,11 @@ p.phone {
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		max-width: 450px;
-	}
-	h3, p {
 		text-align: left;
 	}
 	p {
 		text-indent: 10px;
+		text-align: left;
 	}
 	button {
 		float: right;
@@ -159,7 +156,7 @@ p.phone {
 	color: #414141;
 	max-width: 500px;
 	margin: 0 auto;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	padding: 5px 0 15px 20px;
 	position: relative;
 	div {
@@ -173,7 +170,8 @@ p.phone {
 	h3 {
 		color: $primary-color;
 	}
-	h3, p {
+	h3,
+	p {
 		text-align: left;
 		text-transform: uppercase;
 		overflow: hidden;
@@ -214,7 +212,7 @@ p.phone {
 .error-message {
 	@include responsive-font-size (1.4em, 1.5em, 640px, 1200px, 0.5em);
 	margin-top: 1.5vh;
-	color:  #dd4b39;
+	color: #dd4b39;
 }
 
 @media (max-width: 765px) {
@@ -232,11 +230,6 @@ p.phone {
 	}
 }
 
-* {
-	box-sizing: border-box;
-	font-family: 'Josefin Sans', sans-serif;
-}
-
 #disabled {
 	background-color: $primary-color * .6;
 }
@@ -248,11 +241,12 @@ p.phone {
 }
 
 .navbar {
- -webkit-box-shadow: 0 8px 6px -6px #999;
- -moz-box-shadow: 0 8px 6px -6px #999;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),	0 3px 6px rgba(0, 0, 0, 0.23);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	padding: 7px 2vw 5px 3vw;
 	background-color: white;
+	margin-bottom: none;
 	.navbar-brand {
 		text-transform: uppercase;
 		position: relative;
@@ -273,8 +267,7 @@ p.phone {
 	text-align: center;
 	margin: 0 auto;
 	h1 {
-		@include responsive-font-size (2.5em, 8em, 640px, 1200px, 0.5em);
-		// margin-top: 30vh;
+		@include responsive-font-size (2.5em, 8em, 640px, 1200px, 0.5em); // margin-top: 30vh;
 		color: $primary-color;
 		text-transform: uppercase;
 	}
@@ -285,15 +278,11 @@ p.phone {
 		margin: 0 auto;
 		margin-top: 20px;
 		padding: 0 50px;
-		}
+	}
 	.logins {
 		span {
 			padding: 20px;
 			@include responsive-font-size (.5em, 1.7em, 640px, 1200px, 0.5em);
-		}
-		a {
-		} & :hover {
-			color: black;
 		}
 	}
 	a, span {
@@ -316,7 +305,7 @@ p.phone {
 			margin: 0 auto;
 			margin-top: 8vh;
 			margin-bottom: 20vh;
-			}
+		}
 	}
 	.logo {
 		max-height: 20vh;
@@ -324,7 +313,6 @@ p.phone {
 		margin-bottom: 3vh;
 	}
 }
-
 
 .signup {
 	text-align: center;
@@ -379,7 +367,8 @@ p.phone {
 		&:hover {
 			background-color: $primary-color * .8;
 		}
-	}	.image-bar {
+	}
+	.image-bar {
 		max-width: 600px;
 	}
 	.fb {
@@ -504,69 +493,84 @@ p.phone {
 		height: 93vh;
 	}
 	.main-content {
-	 -webkit-box-shadow: 2px 0 5px -2px #999;
+		-webkit-box-shadow: 2px 0 5px -2px #999;
 		box-shadow: 2px 0 5px -2px #999;
 		z-index: 1;
 		height: 93vh;
 		text-align: center;
 		.search-filters {
-			margin-top: 5vh;
-			input, select {
-				text-align: center;
-				@include responsive-font-size (1em, 1.3em, 640px, 1200px, 0.5em);
-				margin: 0 auto;
-				margin-bottom: 20px;
-				text-align: left;
-				color: $main-text-color;
-				border-radius: 5px;
-			}
-	}
-	#search-collapse {
-		margin-top: 3.5vh;
-	}
-	#route-name {
-		border: none;
-		border-bottom: .5px solid $main-text-color;
-		margin: 0 auto;
-		margin-top: 18vh;
-		margin-bottom: 2vh;
-		display: block;
-	}
-	#signin-route {
-		@include responsive-font-size (1em, 1.5em, 640px, 1200px, 0.5em);
-		border: none;
-		margin: 0 auto;
-		margin-top: 20vh;
-		margin-bottom: 2vh;
-		display: block;
-	}
-	button {
-		background-color: $primary-color;
-		@include responsive-font-size (.9em, 1.4em, 640px, 1200px, 0.5em);
-		color: white;
-		padding: 10px 25px 5px 25px;
-		border: none;
-		border-radius: none;
-		text-transform: uppercase;
-		font-weight: $bold-font;
-		border-radius: 100px;
-		a {
-			color: white;
-			&:hover {
-				text-decoration: none;
+			.form-control {
+				margin-top: 3vh;
+				height: 40px;
+				input {
+					@include responsive-font-size (1em, 1.2em, 640px, 1200px, 0.5em);
+					margin: 0 auto;
+					margin-bottom: 20px;
+					padding-top: 10px;
+					text-align: left;
+					color: $main-text-color;
+					border-radius: 5px;
+				}
 			}
 		}
+		#search-collapse {
+			margin-top: 3.5vh;
+		}
+		#route-name {
+			border: none;
+			border-bottom: .5px solid $main-text-color;
+			margin: 0 auto;
+			margin-top: 15vh;
+			margin-bottom: 2vh;
+			display: block;
+		}
+		#signin-route {
+			@include responsive-font-size (1em, 1.5em, 640px, 1200px, 0.5em);
+			border: none;
+			margin: 0 auto;
+			margin-top: 16vh;
+			margin-bottom: 2vh;
+			display: block;
+		}
+		button {
+			background-color: $primary-color;
+			@include responsive-font-size (.9em, 1.4em, 640px, 1200px, 0.5em);
+			color: white;
+			padding: 10px 25px 5px 25px;
+			border: none;
+			border-radius: none;
+			text-transform: uppercase;
+			font-weight: $bold-font;
+			border-radius: 100px;
+			a {
+				color: white;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		.radius {
+			max-width: 70px;
+			display: inline;
+		}
+		span {
+			margin-left: 5%;
+		}
 	}
-	.radius {
-		max-width: 70px;
-		display: inline;
-	}
-	span {
-		margin-left: 5%;
-	}
-}
 }
 
+select#country.form-control,
+select#type.form-control,
+select#name.form-control,
+select#keyword.form-control {
+	@include responsive-font-size (1em, 1em, 640px, 1200px, 0.5em);
+	height: 35px;
+	margin: 0 auto;
+	margin-top: 3vh;
+	text-align: left;
+	color: $main-text-color;
+	border-radius: 5px;
+}
 
 .profile-content-form {
 	input {
@@ -605,8 +609,8 @@ p.phone {
 	}
 	.profile-headers {
 		h2 {
-		@include responsive-font-size (.45em, 2em, 320px, 1200px, 0.5em);
-		padding: 11px 10px 5px 10px;
+			@include responsive-font-size (.45em, 2em, 320px, 1200px, 0.5em);
+			padding: 11px 10px 5px 10px;
 		}
 	}
 	div {
@@ -622,14 +626,14 @@ p.phone {
 			}
 		}
 		h1 {
-			margin-top: 8vh;
+			margin-top: 6vh;
 			text-transform: uppercase;
 		}
 		h2 {
-			margin-top: 5vh;
+			margin-top: 4vh;
 			text-transform: uppercase;
 			padding: 5px 10px;
-			}
+		}
 		.active {
 			background-color: $primary-color;
 			max-width: 300px;

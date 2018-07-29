@@ -1,3 +1,9 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 @media screen and (min-width: 0px) and (max-width: 766px) {
   #search-collapse {
     display: block;
@@ -9,6 +15,9 @@
     position: relative;
     top: -150px;
     min-width: 150px;
+  }
+  .main .search-filters {
+    margin-top: 6vh;
   }
 }
 
@@ -23,6 +32,9 @@
     position: relative;
     top: -200px;
     min-width: 150px;
+  }
+  .main .search-filters {
+    margin-top: 3vh;
   }
 }
 
@@ -121,14 +133,12 @@ p.phone {
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 450px;
-}
-
-.farm-card h3, .farm-card p {
   text-align: left;
 }
 
 .farm-card p {
   text-indent: 10px;
+  text-align: left;
 }
 
 .farm-card button {
@@ -178,7 +188,8 @@ p.phone {
   color: #d99728;
 }
 
-.route-card h3, .route-card p {
+.route-card h3,
+.route-card p {
   text-align: left;
   text-transform: uppercase;
   overflow: hidden;
@@ -256,12 +267,6 @@ p.phone {
   }
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Josefin Sans', sans-serif;
-}
-
 #disabled {
   background-color: #825b18;
 }
@@ -273,10 +278,11 @@ p.phone {
 }
 
 .navbar {
-  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   padding: 7px 2vw 5px 3vw;
   background-color: white;
+  margin-bottom: none;
 }
 
 .navbar .navbar-brand {
@@ -422,10 +428,6 @@ p.phone {
   .home .logins span {
     font-size: 0.86066em;
   }
-}
-
-.home .logins :hover {
-  color: black;
 }
 
 .home a, .home span {
@@ -861,35 +863,36 @@ p.phone {
   text-align: center;
 }
 
-.main .main-content .search-filters {
-  margin-top: 5vh;
+.main .main-content .search-filters .form-control {
+  margin-top: 3vh;
+  height: 40px;
 }
 
-.main .main-content .search-filters input, .main .main-content .search-filters select {
-  text-align: center;
-  font-size: 1.3em;
+.main .main-content .search-filters .form-control input {
+  font-size: 1.2em;
   margin: 0 auto;
   margin-bottom: 20px;
+  padding-top: 10px;
   text-align: left;
   color: #6c6c6c;
   border-radius: 5px;
 }
 
 @media all and (max-width: 640px) {
-  .main .main-content .search-filters input, .main .main-content .search-filters select {
+  .main .main-content .search-filters .form-control input {
     font-size: 1em;
   }
 }
 
 @media all and (max-width: 1200px) {
-  .main .main-content .search-filters input, .main .main-content .search-filters select {
-    font-size: 1.3em;
+  .main .main-content .search-filters .form-control input {
+    font-size: 1.2em;
   }
 }
 
-@media all and (max-width: 738px) {
-  .main .main-content .search-filters input, .main .main-content .search-filters select {
-    font-size: 1.09124em;
+@media all and (max-width: 700px) {
+  .main .main-content .search-filters .form-control input {
+    font-size: 1.05156em;
   }
 }
 
@@ -901,7 +904,7 @@ p.phone {
   border: none;
   border-bottom: 0.5px solid #6c6c6c;
   margin: 0 auto;
-  margin-top: 18vh;
+  margin-top: 15vh;
   margin-bottom: 2vh;
   display: block;
 }
@@ -910,7 +913,7 @@ p.phone {
   font-size: 1.5em;
   border: none;
   margin: 0 auto;
-  margin-top: 20vh;
+  margin-top: 16vh;
   margin-bottom: 2vh;
   display: block;
 }
@@ -978,6 +981,37 @@ p.phone {
 
 .main .main-content span {
   margin-left: 5%;
+}
+
+select#country.form-control,
+select#type.form-control,
+select#name.form-control,
+select#keyword.form-control {
+  font-size: 1em;
+  height: 35px;
+  margin: 0 auto;
+  margin-top: 3vh;
+  text-align: left;
+  color: #6c6c6c;
+  border-radius: 5px;
+}
+
+@media all and (max-width: 640px) {
+  select#country.form-control,
+  select#type.form-control,
+  select#name.form-control,
+  select#keyword.form-control {
+    font-size: 1em;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  select#country.form-control,
+  select#type.form-control,
+  select#name.form-control,
+  select#keyword.form-control {
+    font-size: 1em;
+  }
 }
 
 .profile-content-form input {
@@ -1064,12 +1098,12 @@ p.phone {
 }
 
 .profile div h1 {
-  margin-top: 8vh;
+  margin-top: 6vh;
   text-transform: uppercase;
 }
 
 .profile div h2 {
-  margin-top: 5vh;
+  margin-top: 4vh;
   text-transform: uppercase;
   padding: 5px 10px;
 }
