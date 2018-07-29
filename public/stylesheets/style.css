@@ -5,6 +5,11 @@
   .home button {
     padding: 8px 40px 5px 40px;
   }
+  .main #get_route {
+    position: relative;
+    top: -150px;
+    min-width: 150px;
+  }
 }
 
 @media screen and (min-width: 767px) and (max-width: 5000px) {
@@ -13,6 +18,11 @@
   }
   .home button {
     padding: 12px 40px 5px 40px;
+  }
+  .main #get_route {
+    position: relative;
+    top: -200px;
+    min-width: 150px;
   }
 }
 
@@ -127,7 +137,7 @@ p.phone {
   bottom: 20px;
   right: 25px;
   border-radius: 100px;
-  padding: 5px 15px 3px 15px;
+  padding: 8px 15px 3px 15px;
   background-color: #d99728;
   border: none;
   text-transform: uppercase;
@@ -187,7 +197,7 @@ p.phone {
   bottom: 20px;
   right: 25px;
   border-radius: 100px;
-  padding: 5px 15px 3px 15px;
+  padding: 8px 15px 3px 15px;
   background-color: #d99728;
   border: none;
   text-transform: uppercase;
@@ -923,10 +933,6 @@ p.phone {
   }
 }
 
-.main .main-content #get_route {
-  margin-top: 2vh;
-}
-
 .main .main-content button {
   background-color: #d99728;
   font-size: 1.4em;
@@ -981,6 +987,9 @@ p.phone {
   border-radius: 100px;
   border: 0.5px solid #6c6c6c;
   padding: 10px;
+  text-align: center;
+  padding: 8px 10px;
+  min-width: 250px;
 }
 
 .profile-content-form button {
@@ -990,7 +999,7 @@ p.phone {
   border-radius: 100px;
   border: none;
   margin-top: 10px;
-  padding: 5px 15px 3px 15px;
+  padding: 10px 25px 5px 25px;
   margin-bottom: 5vh;
 }
 
@@ -1011,6 +1020,7 @@ p.phone {
 
 .profile .profile-headers h2 {
   font-size: 2em;
+  padding: 11px 10px 5px 10px;
 }
 
 @media all and (max-width: 320px) {
@@ -1072,7 +1082,7 @@ p.phone {
   background-size: 80%;
   font-weight: 600;
   color: white;
-  padding: 5px 10px 3px 10px;
+  padding: 11px 10px 5px 10px;
   border-radius: 100px;
 }
 /*# sourceMappingURL=style.css.map */
