@@ -25,7 +25,7 @@ p.phone {
   margin: 0 auto;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  padding: 5px 0 15px 20px;
+  padding: 5px 20px 15px 20px;
   position: relative;
 }
 
@@ -557,9 +557,29 @@ p.phone {
   margin: 0 auto;
   border-radius: 100px;
   border: 0.5px solid #616161;
-  padding: 8px 50px;
+  font-size: 1.2em;
+  padding: 8px 30px;
   text-align: center;
+  min-width: 250px;
   margin-bottom: 3vh;
+}
+
+@media all and (max-width: 640px) {
+  .signup form input {
+    font-size: 1em;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .signup form input {
+    font-size: 1.2em;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .signup form input {
+    font-size: 1.05156em;
+  }
 }
 
 .signup button {
@@ -573,6 +593,7 @@ p.phone {
   padding: 15px 40px 10px 40px;
   border-radius: 100px;
   font-weight: 600;
+  min-width: 250px;
   text-transform: uppercase;
 }
 
@@ -708,9 +729,29 @@ p.phone {
   margin: 0 auto;
   border-radius: 100px;
   border: 0.5px solid #616161;
-  padding: 8px 50px;
+  font-size: 1.2em;
+  padding: 8px 40px;
   text-align: center;
   margin-bottom: 3vh;
+  min-width: 250px;
+}
+
+@media all and (max-width: 640px) {
+  .login form input {
+    font-size: 1em;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .login form input {
+    font-size: 1.2em;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .login form input {
+    font-size: 1.05156em;
+  }
 }
 
 .login button {
@@ -722,7 +763,7 @@ p.phone {
   color: white;
   min-width: 250px;
   border: none;
-  padding: 15px 40px 10px 40px;
+  padding: 12px 40px 8px 40px;
   border-radius: 100px;
   font-weight: 600;
   text-transform: uppercase;
@@ -925,6 +966,18 @@ p.phone {
 
 .main .main-content span {
   margin-left: 5%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 766px) {
+  #search-collapse {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 5000px) {
+  #search-collapse {
+    display: none;
+  }
 }
 
 .profile-content-form input {

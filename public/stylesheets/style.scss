@@ -35,7 +35,7 @@ p.phone {
 	max-width: 500px;
 	margin: 0 auto;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-	padding: 5px 0 15px 20px;
+	padding: 5px 20px 15px 20px;
 	position: relative;
 	img {
 		max-width: 100px;
@@ -326,8 +326,10 @@ p.phone {
 			margin: 0 auto;
 			border-radius: 100px;
 			border: .5px solid $main-text-color * .9;
-			padding: 8px 50px;
+			@include responsive-font-size (1em, 1.2em, 640px, 1200px, 0.5em);
+			padding: 8px 30px;
 			text-align: center;
+			min-width: 250px;
 			margin-bottom: 3vh;
 		}
 	}
@@ -342,6 +344,7 @@ p.phone {
 		padding: 15px 40px 10px 40px;
 		border-radius: 100px;
 		font-weight: $bold-font;
+		min-width: 250px;
 		text-transform: uppercase;
 		&:hover {
 			background-color: $primary-color * .8;
@@ -407,9 +410,11 @@ p.phone {
 			margin: 0 auto;
 			border-radius: 100px;
 			border: .5px solid $main-text-color * .9;
-			padding: 8px 50px;
+			@include responsive-font-size (1em, 1.2em, 640px, 1200px, 0.5em);
+			padding: 8px 40px;
 			text-align: center;
 			margin-bottom: 3vh;
+			min-width: 250px;
 		}
 	}
 	button {
@@ -421,7 +426,7 @@ p.phone {
 		color: white;
 		min-width: 250px;
 		border: none;
-		padding: 15px 40px 10px 40px;
+		padding: 12px 40px 8px 40px;
 		border-radius: 100px;
 		font-weight: $bold-font;
 		text-transform: uppercase;
@@ -534,6 +539,25 @@ p.phone {
 	}
 }
 }
+
+
+@media screen and (min-width: 0px) and (max-width: 766px) {
+	#search-collapse {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 767px) and (max-width: 5000px) {
+	#search-collapse {
+		display: none;
+	}
+}
+
+
+
+
+
+
 
 .profile-content-form {
 	input {
