@@ -24,15 +24,16 @@
         <h3>EMAIL</h3>
         <p><%= user.email %></p>
       </div>
+      <button type="submit" onclick="toggleProfileEdit()">Edit Profile</button>
     </div>
-
   </div>
-  <div class="row profile-content-form">
+
+  <div class="row profile-content-form hidden" id="profileEdit">
     <div class="col-sm-12">
-    <h3>CHANGE ACCOUT INFO</h3>
-    <form action="/account/<%= user._id %>" method="POST">
+    <h3>CHANGE ACCOUNT INFO</h3>
+    <form action="/me>" method="PUT">
       <label for="name">Name</label>
-      <input type="text" id="name" name="name" value="<%= user.username %>">
+      <input type="text" id="username" name="username" value="<%= user.username %>">
 
       <label for="email">Email</label>
       <input type="text" name="email" id="email" value="<%= user.email %>">
@@ -43,3 +44,13 @@
   </div>
 
 </div>
+
+<script>
+    function toggleProfileEdit() {
+      var element = document.getElementById("profileEdit");
+      element.classList.toggle("hidden");
+      console.log('button clicked');
+    }
+</script>
+
+
