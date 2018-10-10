@@ -54,6 +54,10 @@ $bold-font: 600;
 	}
 }
 
+.hidden {
+	display: none;
+}
+
 .logo-small {
 	max-height: 4vh;
 	position: absolute;
@@ -600,6 +604,15 @@ select#keyword.form-control {
 	margin: 0 auto;
 	margin-top: 7vh;
 	color: $main-text-color;
+	button {
+		background-color: $primary-color;
+		text-transform: uppercase;
+		color: white;
+		border-radius: 100px;
+		border: none;
+		margin-top: 10px;
+		padding: 10px 25px 5px 25px;
+	}
 	.profile-content {
 		margin-top: 3vh;
 		margin-bottom: 0vh;
@@ -610,7 +623,7 @@ select#keyword.form-control {
 	.profile-headers {
 		h2 {
 			@include responsive-font-size (.45em, 2em, 320px, 1200px, 0.5em);
-			padding: 11px 10px 5px 10px;
+			padding: 18px 10px 5px 10px;
 		}
 	}
 	div {

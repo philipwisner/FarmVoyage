@@ -38,6 +38,10 @@
   }
 }
 
+.hidden {
+  display: none;
+}
+
 .logo-small {
   max-height: 4vh;
   position: absolute;
@@ -1043,6 +1047,16 @@ select#keyword.form-control {
   color: #6c6c6c;
 }
 
+.profile button {
+  background-color: #d99728;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 100px;
+  border: none;
+  margin-top: 10px;
+  padding: 10px 25px 5px 25px;
+}
+
 .profile .profile-content {
   margin-top: 3vh;
   margin-bottom: 0vh;
@@ -1054,7 +1068,7 @@ select#keyword.form-control {
 
 .profile .profile-headers h2 {
   font-size: 2em;
-  padding: 11px 10px 5px 10px;
+  padding: 18px 10px 5px 10px;
 }
 
 @media all and (max-width: 320px) {

@@ -233,8 +233,10 @@ function initialize() {
 
 
 //bind get
-var myRoute = document.getElementById('get_route');
-myRoute.onclick = function() { route(); }
+// var myRoute = document.getElementById('get_route');
+// myRoute.onclick = function() {
+//     route();
+// }
 
 function route() {
     // Clear any previous route boxes from the map
@@ -389,7 +391,7 @@ function createMarker(place) {
 
             console.log('place', place)
             if (status == google.maps.places.PlacesServiceStatus.OK) {
-                var contentStr = '<form id="saveplace" action="/maps/save/place" method="post">' + 
+                var contentStr = '<form id="saveplace" action="/maps/save/place" method="post">' +
                                      '<h3>'+ place.name +'</h3>' +
                                      '<input type="hidden" id="placeName" name="placeName" value="' + place.name + '">' +
                                      '<br /><strong>'+ place.types +'</strong>' +
@@ -454,6 +456,7 @@ function createMarker(place) {
     });
 
 }
+
 
 // var contentStr = '<h5>' + place.name + '</h5><p>' + place.formatted_address;
 //                 if (!!place.formatted_phone_number) contentStr += '<br>' + place.formatted_phone_number;
