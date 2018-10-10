@@ -44,7 +44,7 @@ router.get('/route/:id', ensureLoggedIn('/login'), (req, res) => {
 //get json data
 router.get('/route/json', (req, res, next) => {
     RouteSaved.find({}, (error, routes) => {
-    if (error) { next(error); 
+    if (error) { next(error);
     } else {
         console.log(JSON.stringify(routes));
           next();
@@ -86,6 +86,23 @@ router.get('/account', ensureLoggedIn('/login'), (req, res) => {
     });
 });
 
+router.put('/me', ensureLoggedIn('/login'), (req, res, next) => {
+  const userUpdate = {
+    username: req.body.username || req.user.username,
+    email: req.body.email || req.user.email,
+  };
+
+  User.findByIdAndUpdate(req.user._id, userUpdate, {new: true}, (err, user) => {
+    if (err) {
+      return next(err);
+    }
+    if (!user) {
+      return response.notFound(req, res);
+    }
+    let data = user.asData();
+    return response.data(req, res, data);
+  });
+});
 
 //works
 // router.get('/route', ensureLoggedIn('/login'), (req, res, next) => {
