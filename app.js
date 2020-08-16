@@ -13,7 +13,7 @@ const flash = require('connect-flash');
 require("dotenv").config();
 
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(process.env.DB_URI, {
   useMongoClient: true
 });
 // mongoose.connect('mongodb://localhost:27017/farm-voyage-development');

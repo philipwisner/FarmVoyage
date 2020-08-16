@@ -7,12 +7,6 @@ const {
 } = require('connect-ensure-login');
 
 const User = require("../models/user");
-
-// Bcrypt to encrypt passwords
-const bcrypt = require("bcrypt");
-const bcryptSalt = 10;
-
-
 //signIn
 router.get('/login', ensureLoggedOut(), (req, res) => {
   res.render('auth/login', {
